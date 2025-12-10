@@ -34,13 +34,13 @@ from langchain_core.runnables import (
 from langchain_core.tools import BaseTool
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph, add_messages
-from langgraph.prebuilt import ToolNode
 from pydantic import BaseModel
 
 from django_ai_assistant.decorators import with_cast_id
 from django_ai_assistant.exceptions import (
     AIAssistantMisconfiguredError,
 )
+from django_ai_assistant.helpers.adapters import ToolNode
 from django_ai_assistant.helpers.django_messages import save_django_messages
 from django_ai_assistant.langchain.tools import tool as tool_decorator
 
@@ -530,7 +530,8 @@ class AIAssistant(abc.ABC):  # noqa: F821
         workflow.add_node("history", history)
         workflow.add_node("retriever", retriever)
         workflow.add_node("agent", agent)
-        workflow.add_node("tools", ToolNode(tools))
+        tools = sorted(tools, key=lambda t: t.name)
+        workflow.add_node("tools", ToolNode(list(tools)))
         workflow.add_node("respond", record_response)
 
         workflow.set_entry_point("setup")
