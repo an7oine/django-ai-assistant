@@ -29,13 +29,13 @@ from langchain_core.runnables import (
 from langchain_core.tools import BaseTool, StructuredTool
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph, add_messages
+from langgraph.prebuilt import ToolNode
 from pydantic import BaseModel
 
 from django_ai_assistant.decorators import with_cast_id
 from django_ai_assistant.exceptions import (
     AIAssistantMisconfiguredError,
 )
-from django_ai_assistant.helpers.adapters import ToolNode
 from django_ai_assistant.helpers.django_messages import save_django_messages
 from django_ai_assistant.langchain.tools import tool as tool_decorator
 
