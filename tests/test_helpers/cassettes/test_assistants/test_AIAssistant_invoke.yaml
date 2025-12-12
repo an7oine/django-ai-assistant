@@ -30,22 +30,24 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFNNi9swEL37V4g5JyXJpvnwsc3mUMq2tNDCNouR5bGtXVkS0nhpGvLf
-        i+XEdrIp1Acj5um9efOhQ8QYyAxiBqLkJCqrxh9VuXqdP2hay+fP28cP+z+1m8v06/3jZlHCqGGY
-        9BkFnVnvhKmsQpJGt7BwyAkb1ely8X6+uput7wJQmQxVQyssjedmPJvM5uPJajxZnIilkQI9xOxX
-        xBhjh/BvLOoMf0PMJqNzpELveYEQd5cYA2dUEwHuvfTENcGoB4XRhLpxrWulBgAZoxLBleoTt99h
-        cO77xJVK0hf1sPnktj+WfnM//f5znTr01ZftIF8rvbfBUF5r0fVngHfx+CoZY6B51XKRRJmI2jnU
-        lBBWFh2n2uGVGGPAXVFXqKkpBA47UEbwRn4H8Q6+oZA57uAIF7RjdOv8NOiPw7z2XL1tHNfaUEgQ
-        Ovd0Qo7dkJQprDOpv6JCLrX0ZeKQ+1D7cATR2UiwAPXFlME6U1lKyLxgSDqdTltV6JdwgC5OIBni
-        ahCfLUc39JIMicuwBt3mCS5KzHpqv4G8zqQZANGg9rdubmm39Utd/I98DwiBljBLrMNMisuK+2sO
-        mzf6r2tdl4Nh8OhepcCEJLpmHhnmvFbt8wG/94RVkktdoLNOhjcEuU0Wq3XKsxWuOUTH6C8AAAD/
-        /wMAp1TcckwEAAA=
+      string: "{\n  \"id\": \"chatcmpl-Cm1fToB55UUnL6IhRyHYkwtEQMd9W\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562191,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n
+        \           \"id\": \"call_jI6UNFQO0vy6fVPwrtRqoM5Y\",\n            \"type\":
+        \"function\",\n            \"function\": {\n              \"name\": \"fetch_current_temperature\",\n
+        \             \"arguments\": \"{\\\"location\\\":\\\"Recife\\\"}\"\n            }\n
+        \         }\n        ],\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 111,\n    \"completion_tokens\":
+        16,\n    \"total_tokens\": 127,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_a4d13246c5\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -60,10 +62,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '1100'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '482'
+      - '794'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -71,8 +75,8 @@ interactions:
       message: OK
 - request:
     body: '{"messages":[{"content":"You are a temperature bot. Today is 2024-06-09.","role":"system"},{"content":"What
-      is the temperature today in Recife?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_bklNDJrFV7sDE1SW9bresmOF","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
-      \"Recife\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_bklNDJrFV7sDE1SW9bresmOF"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
+      is the temperature today in Recife?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_jI6UNFQO0vy6fVPwrtRqoM5Y","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
+      \"Recife\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_jI6UNFQO0vy6fVPwrtRqoM5Y"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
       the current temperature data for a location","parameters":{"properties":{"location":{"type":"string"}},"required":["location"],"type":"object"}}},{"type":"function","function":{"name":"fetch_forecast_temperature","description":"Fetch
       the forecast temperature data for a location","parameters":{"type":"object","properties":{"location":{"type":"string"},"dt_str":{"description":"Date
       in the format ''YYYY-MM-DD''","type":"string"}},"required":["location","dt_str"]}}}]}'
@@ -103,20 +107,21 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFLBbtswDL37Kwid4yJx7NTJcT1u62EYUGBDYagSbauTJUGkixZF/n2Q
-        k8bu1gG76MDH9/QeydcMQBgtDiBUL1kNweY3tq+f3d69xNv68emui6b4/KNWX28/lV/uxCox/MMj
-        Kn5jXSk/BItsvDvBKqJkTKqb611V1ttiX03A4DXaROsC56XPi3VR5us6X+/OxN4bhSQO8DMDAHid
-        3mTRaXwWB1iv3ioDEskOxeHSBCCit6kiJJEhlo7FagaVd4xucv29R1BjjOgYGIeAUfIYEYyDb6hM
-        i2AItgVo7CIiwQ1aMiNdLeUitiPJlMaN1i4A6ZxnmaYxBbk/I8eLdeu7EP0D/UEVrXGG+iaiJO+S
-        TWIfxIQeM4D7aUTju9QiRD8Ebtj/wum7zXZ/0hPzUhZocQbZs7SLerVZfaDXaGRpLC2GLJRUPeqZ
-        Om9Ejtr4BZAtUv/t5iPtU3Ljuv+RnwGlMDDqJkTURr1PPLdFTDf7r7bLlCfDgjA+GYUNG4xpExpb
-        OdrTOQl6IcahaY3rMIZoTjfVhqbeVlWpdvU1iuyY/QYAAP//AwD+A1BnXAMAAA==
+      string: "{\n  \"id\": \"chatcmpl-Cm1fWujXgLuEeSkqJcJTWmxoXQ39w\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562194,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"The current temperature in Recife is
+        32 degrees Celsius.\",\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 139,\n    \"completion_tokens\":
+        12,\n    \"total_tokens\": 151,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -131,10 +136,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '860'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '945'
+      - '510'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -142,8 +149,8 @@ interactions:
       message: OK
 - request:
     body: '{"messages":[{"content":"You are a temperature bot. Today is 2024-06-09.","role":"system"},{"content":"What
-      is the temperature today in Recife?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_bklNDJrFV7sDE1SW9bresmOF","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
-      \"Recife\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_bklNDJrFV7sDE1SW9bresmOF"},{"content":"The
+      is the temperature today in Recife?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_jI6UNFQO0vy6fVPwrtRqoM5Y","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
+      \"Recife\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_jI6UNFQO0vy6fVPwrtRqoM5Y"},{"content":"The
       current temperature in Recife is 32 degrees Celsius.","role":"assistant"},{"content":"What
       about tomorrow?","role":"user"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
       the current temperature data for a location","parameters":{"properties":{"location":{"type":"string"}},"required":["location"],"type":"object"}}},{"type":"function","function":{"name":"fetch_forecast_temperature","description":"Fetch
@@ -176,22 +183,24 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFNNb5wwEL3zK6w5LxWQ/WA5NlUPVdNKbZRW7UbIMQM4MTayh7Sb1f73
-        CNgFdrOVygFZ8/zezLwZ7zzGQGaQMBAlJ1HVyr9W5TpozPbj+0/zH0VIN7cBXYd3q+b7HxHDrGWY
-        h0cUdGS9E6aqFZI0uoeFRU7Yqoar5WIeX0XruAMqk6FqaUVN/tz4URDN/SD2g+WBWBop0EHCfnuM
-        Mbbr/m2JOsO/kLBgdoxU6BwvEJLhEmNgjWojwJ2TjrgmmI2gMJpQt1XrRqkJQMaoVHClxsT9t5uc
-        R5+4UumHzxT9qp5v7tbZ6uf6y8v25en2Mbz7OsnXS2/rrqC80WLwZ4IP8eQsGWOgedVzkUSZ5sai
-        4I5SwqpGy6mxeKbGGHBbNBVqajuB3QaUEbzV30CygW8oZI4bmG0go9SR7aL9DJZ+GGxgDyeCe+/S
-        +X5incW8cVy99ZRrbahL3Zl6f0D2w/yUKWprHtwZFXKppStTi9x1tkyn4x0L6UqA5mQBoLamqikl
-        84Rd0nAZ9aow7ueIRqsDSIa4mrDi9eyCXpohcdltyLCUgosSs5E6LidvMmkmgDfp/W01l7T7/qUu
-        /kd+BITAmjBLa4uZFKcdj9csts/3X9cGl7uCwaF9lgJTkmjbeWSY80b1Lwvc1hFWaS51gba2snte
-        kNdpfLVYzMUyXiF4e+8VAAD//wMAgz8YjWcEAAA=
+      string: "{\n  \"id\": \"chatcmpl-Cm1fZKmxRYELR3hIeuY1EWUDQDZkz\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562197,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n
+        \           \"id\": \"call_9BilBWvCVWEmtfQeYknNqSxt\",\n            \"type\":
+        \"function\",\n            \"function\": {\n              \"name\": \"fetch_forecast_temperature\",\n
+        \             \"arguments\": \"{\\\"location\\\":\\\"Recife\\\",\\\"dt_str\\\":\\\"2024-06-10\\\"}\"\n
+        \           }\n          }\n        ],\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 162,\n    \"completion_tokens\":
+        27,\n    \"total_tokens\": 189,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -206,10 +215,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '1127'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '2199'
+      - '1055'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -217,11 +228,11 @@ interactions:
       message: OK
 - request:
     body: '{"messages":[{"content":"You are a temperature bot. Today is 2024-06-09.","role":"system"},{"content":"What
-      is the temperature today in Recife?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_bklNDJrFV7sDE1SW9bresmOF","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
-      \"Recife\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_bklNDJrFV7sDE1SW9bresmOF"},{"content":"The
+      is the temperature today in Recife?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_jI6UNFQO0vy6fVPwrtRqoM5Y","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
+      \"Recife\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_jI6UNFQO0vy6fVPwrtRqoM5Y"},{"content":"The
       current temperature in Recife is 32 degrees Celsius.","role":"assistant"},{"content":"What
-      about tomorrow?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_DLt2ZmvMV9d7X9NzyzkTj1VO","function":{"name":"fetch_forecast_temperature","arguments":"{\"location\":
-      \"Recife\", \"dt_str\": \"2024-06-10\"}"}}]},{"content":"35 degrees Celsius","role":"tool","tool_call_id":"call_DLt2ZmvMV9d7X9NzyzkTj1VO"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
+      about tomorrow?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_9BilBWvCVWEmtfQeYknNqSxt","function":{"name":"fetch_forecast_temperature","arguments":"{\"location\":
+      \"Recife\", \"dt_str\": \"2024-06-10\"}"}}]},{"content":"35 degrees Celsius","role":"tool","tool_call_id":"call_9BilBWvCVWEmtfQeYknNqSxt"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
       the current temperature data for a location","parameters":{"properties":{"location":{"type":"string"}},"required":["location"],"type":"object"}}},{"type":"function","function":{"name":"fetch_forecast_temperature","description":"Fetch
       the forecast temperature data for a location","parameters":{"type":"object","properties":{"location":{"type":"string"},"dt_str":{"description":"Date
       in the format ''YYYY-MM-DD''","type":"string"}},"required":["location","dt_str"]}}}]}'
@@ -252,20 +263,21 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAA4xSwY7TMBC95ytGPjerNE3a0usuEkgIIYS4oFXk2pPEi+Ox7AkLrPrvKEnbZGGR
-        9uLDvHnj997MUwIgjBYHEKqVrDpv01vbvikw6z627z8c66L+XX59zN/d6U9v+UGK1cCg4wMqvrBu
-        FHXeIhtyE6wCSsZh6nq3LYv9ZpPlI9CRRjvQGs9pQWme5UWa7dNseya2ZBRGcYBvCQDA0/gOEp3G
-        n+IA2epS6TBG2aA4XJsARCA7VISM0USWjsVqBhU5Rjeq/tIi1BRQyciogbHzGCT3YSwDU0ch0CMY
-        B59RmRrBRNiUoLEJiBFu0UbTx5vl+IB1H+XgzvXWLgDpHLEc0hmN3Z+R09WKpcYHOsa/qKI2zsS2
-        CigjuUF2ZPJiRE8JwP0YWf8sBeEDdZ4rpu84fpdPyY/2L0ua0XV5BplY2gVrvVu9MK/SyNLYuAhd
-        KKla1DN13pDstaEFkCxc/6vmpdmTc+Oa14yfAaXQM+rKB9RGPXc8twUcbvh/bdeUR8EiYvhhFFZs
-        MAyb0FjL3k7nJeKvyNhVtXENBh/MdGO1r/absizUdr9DkZySPwAAAP//AwBCpY1LbAMAAA==
+      string: "{\n  \"id\": \"chatcmpl-Cm1fcRq4nljYRWMyrRuEINGbYBx1o\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562200,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"The forecasted temperature for tomorrow
+        in Recife is 35 degrees Celsius.\",\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 202,\n    \"completion_tokens\":
+        15,\n    \"total_tokens\": 217,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -280,10 +292,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '876'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '432'
+      - '335'
       x-openai-proxy-wasm:
       - v0.1
     status:

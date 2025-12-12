@@ -30,37 +30,46 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        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
-        ypwKAAA=
+      string: "{\n  \"id\": \"chatcmpl-Cm1gGATNtIpS55JsTJBWL77latkJT\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562240,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"\\\"Shrek\\\" is a 2001 animated comedy
+        film directed by Andrew Adamson and Vicky Jenson. It was produced by DreamWorks
+        Animation and is based on a 1990 fairy tale picture book of the same name
+        by William Steig. The film features an ensemble voice cast, including Mike
+        Myers, Eddie Murphy, Cameron Diaz, and John Lithgow.\\n\\n### Plot Summary\\nThe
+        story follows Shrek, a reclusive and grumpy ogre who lives in a swamp. His
+        peaceful life is disrupted when numerous fairy-tale creatures, banished by
+        the evil Lord Farquaad, invade his swamp. In an attempt to reclaim his land,
+        Shrek strikes a deal with Farquaad to rescue Princess Fiona, whom Farquaad
+        intends to marry to become king. Throughout the journey, Shrek is accompanied
+        by Donkey, a talkative and annoying donkey with a big heart. The adventure
+        takes a turn as Shrek and Fiona begin to develop feelings for each other,
+        revealing that Fiona has her own secrets.\\n\\n### Notable Features\\n- **Voice
+        Cast**: Mike Myers as Shrek, Eddie Murphy as Donkey, Cameron Diaz as Princess
+        Fiona, John Lithgow as Lord Farquaad.\\n- **Music**: The soundtrack features
+        a mix of original scores and popular music, including the famous song \\\"All
+        Star\\\" by Smash Mouth.\\n- **Animation**: The film is noted for its groundbreaking
+        use of computer animation and its humorous take on traditional fairy tale
+        tropes.\\n\\n### Reception\\n\\\"Shrek\\\" was both a critical and commercial
+        success, praised for its animation, voice performances, and satirical humor.
+        It won the first-ever Academy Award for Best Animated Feature and was also
+        nominated for Best Adapted Screenplay. The film's success led to several sequels
+        and spin-offs, making it a significant franchise in animation history.\\n\\n\\\"Shrek\\\"
+        is often credited for its role in revitalizing interest in animated films
+        for adults and children alike, blending sharp humor with heartfelt moments.
+        Its influence can be seen in the way that subsequent animated films approached
+        storytelling and humor.\",\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 45,\n    \"completion_tokens\":
+        419,\n    \"total_tokens\": 464,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_37d212baff\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -75,10 +84,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '2779'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '9022'
+      - '7853'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -89,30 +100,31 @@ interactions:
       about movies.\nUse the chat history to produce a JSON output.","role":"system"},{"content":"Provide
       information about the movie Shrek. It was released in 2001 and is an animation
       and comedy movie.","role":"user"},{"content":"\"Shrek\" is a 2001 animated comedy
-      film produced by DreamWorks Animation and directed by Andrew Adamson and Vicky
-      Jenson. It is loosely based on William Steig''s 1990 fairy tale picture book
-      of the same name. The film features a unique twist on traditional fairy tales,
-      turning many familiar tropes on their head.\n\nHere''s a brief overview of the
-      film:\n\n- **Plot**: Shrek is an ogre who lives alone in a swamp and enjoys
-      his solitary life. However, his peace is disturbed when countless fairy tale
-      characters are banished to his swamp by the evil Lord Farquaad. To reclaim his
-      home, Shrek agrees to a deal with Farquaad: to rescue Princess Fiona from a
-      dragon-guarded castle so she can become Farquaad''s bride. Accompanied by a
-      talkative donkey named Donkey, Shrek sets out on his quest, although unexpected
-      twists ensue when he develops feelings for Fiona, who harbors a secret of her
-      own.\n\n- **Voice Cast**: \n  - Mike Myers as Shrek\n  - Eddie Murphy as Donkey\n  -
-      Cameron Diaz as Princess Fiona\n  - John Lithgow as Lord Farquaad\n\n- **Themes**:
-      \"Shrek\" explores themes such as accepting oneself and others, the importance
-      of inner beauty over outer appearance, and challenging traditional stereotypes.\n\n-
-      **Animation and Style**: \"Shrek\" is noted for its groundbreaking use of computer
-      animation at the time, boasting detailed characters and environments. The animation
-      style and humor are complemented by a soundtrack featuring pop music and original
-      compositions.\n\n- **Reception and Legacy**: \"Shrek\" was a critical and commercial
-      success. It won the first-ever Academy Award for Best Animated Feature and received
-      a nomination for Best Adapted Screenplay. It has led to a successful franchise,
-      including sequels, spin-offs, and other adaptations.\n\n\"Shrek\" is praised
-      for its wit, clever storytelling, and memorable characters, making it a timeless
-      favorite for audiences of all ages.","role":"assistant"},{"content":"Use the
+      film directed by Andrew Adamson and Vicky Jenson. It was produced by DreamWorks
+      Animation and is based on a 1990 fairy tale picture book of the same name by
+      William Steig. The film features an ensemble voice cast, including Mike Myers,
+      Eddie Murphy, Cameron Diaz, and John Lithgow.\n\n### Plot Summary\nThe story
+      follows Shrek, a reclusive and grumpy ogre who lives in a swamp. His peaceful
+      life is disrupted when numerous fairy-tale creatures, banished by the evil Lord
+      Farquaad, invade his swamp. In an attempt to reclaim his land, Shrek strikes
+      a deal with Farquaad to rescue Princess Fiona, whom Farquaad intends to marry
+      to become king. Throughout the journey, Shrek is accompanied by Donkey, a talkative
+      and annoying donkey with a big heart. The adventure takes a turn as Shrek and
+      Fiona begin to develop feelings for each other, revealing that Fiona has her
+      own secrets.\n\n### Notable Features\n- **Voice Cast**: Mike Myers as Shrek,
+      Eddie Murphy as Donkey, Cameron Diaz as Princess Fiona, John Lithgow as Lord
+      Farquaad.\n- **Music**: The soundtrack features a mix of original scores and
+      popular music, including the famous song \"All Star\" by Smash Mouth.\n- **Animation**:
+      The film is noted for its groundbreaking use of computer animation and its humorous
+      take on traditional fairy tale tropes.\n\n### Reception\n\"Shrek\" was both
+      a critical and commercial success, praised for its animation, voice performances,
+      and satirical humor. It won the first-ever Academy Award for Best Animated Feature
+      and was also nominated for Best Adapted Screenplay. The film''s success led
+      to several sequels and spin-offs, making it a significant franchise in animation
+      history.\n\n\"Shrek\" is often credited for its role in revitalizing interest
+      in animated films for adults and children alike, blending sharp humor with heartfelt
+      moments. Its influence can be seen in the way that subsequent animated films
+      approached storytelling and humor.","role":"assistant"},{"content":"Use the
       chat history to produce a JSON output.","role":"user"}],"model":"gpt-4o-2024-08-06","response_format":{"type":"json_schema","json_schema":{"name":"OutputSchema","description":"dict()
       -> new empty dictionary\ndict(mapping) -> new dictionary initialized from a
       mapping object''s\n    (key, value) pairs\ndict(iterable) -> new dictionary
@@ -127,7 +139,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3047'
+      - '3110'
       Content-Type:
       - application/json
       Host:
@@ -148,21 +160,20 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jJJBj5swEIXv/AprzlARQhLCbbtSVVXtaS+t1hFy7AG8a2zLNlWjKP+9
-        ArKB3W2lvXDwN+8xb2bOESEgBZQEeMsC76xK7lW718cH/6v58lSsxVZ9/bnvdt/Sz9/7HxnEg8Ic
-        n5CHF9UnbjqrMEijJ8wdsoCD62q33eTFep3vRtAZgWqQNTYkuUmyNMuTtEjS7VXYGsnRQ0keI0II
-        OY/foUUt8A+UJI1fXjr0njUI5a2IEHBGDS/AvJc+MB0gniE3OqAeuz5TCDIopFBSeGgdPlOIKZyQ
-        OQpllqarmEKD2qGnUD5SuNOyY0PAse7edChOFA6Xpb/DuvdsiKd7pRaAaW3CqB6THa7kcsuiTGOd
-        Ofo3Uqillr6tHDJv9NC3D8bCSC8RIYdxZv2rMYB1prOhCuYZx99ts/3kB/OWZroqrjCYwNRCNS3s
-        rV8lMDCp/GLqwBlvUczSeUWsF9IsQLRI/b6bf3lPyaVuPmI/A87RBhSVdSgkf514LnM4HPH/ym5T
-        HhsGj+635FgFiW7YhMCa9Wq6L/AnH7CraqkbdNbJ6chqWxXrzSbn22KHEF2ivwAAAP//AwCE/WoL
-        bQMAAA==
+      string: "{\n  \"id\": \"chatcmpl-Cm1gRgGnOBKM05pH0AdjJUNImZZot\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562251,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"{\\\"title\\\":\\\"Shrek\\\",\\\"year\\\":2001,\\\"genres\\\":[\\\"Animation\\\",\\\"Comedy\\\"]}\",\n
+        \       \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        636,\n    \"completion_tokens\": 18,\n    \"total_tokens\": 654,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -177,10 +188,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '877'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '1058'
+      - '663'
       x-openai-proxy-wasm:
       - v0.1
     status:

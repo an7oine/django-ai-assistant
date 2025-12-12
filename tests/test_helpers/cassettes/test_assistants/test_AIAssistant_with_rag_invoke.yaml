@@ -35,21 +35,24 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFPLbtswELz7KxY8y4H8kO341vbSS3Noe2oRCDS5kpiQXIFc+YHA/15Q
-        diwlTYFeeNjZGc7Oki8TAGG02IJQjWTlWjv9Ypv79fFwOjzpYjanH+45rz8vfv46fr93G5ElBu2e
-        UPEr606Ray2yIX+BVUDJmFRn61Wx3CwWedEDjjTaRKtbni5pOs/ny2m+mearK7EhozCKLfyeAAC8
-        9Gey6DUexRby7LXiMEZZo9jemgBEIJsqQsZoIkvPIhtARZ7R964fUIbdKYMTdaCkh72JhoEbhE8O
-        g0mlb13EzgFV8CC5C9LCVxOZwimDgJ4OHjVUFMBwBDwy+mj2CHhszC6VyIOTzkkbs15XUXQUM5Be
-        g/TKoGdQneUuYLwbuwxYdVGmkHxn7QiQ3hPLFHKfz+MVOd8SsVS3gXbxHVVUxpvYlAFlJJ+mj0yt
-        6NHzBOCxT757E6ZoA7mWS6Zn7K+bzZcXPTHsekDn6yvIxNKOWMUs+0Cv1MjS2DjanVBSNagH6rBo
-        2WlDI2AymvpvNx9pXyY3vv4f+QFQCltGXbYBtVFvJx7aAqav8K+2W8q9YREx7I3Ckg2GtAmNlezs
-        5ZWKeIqMrqyMrzG0wVyeatWWm0VRLNVqs0YxOU/+AAAA//8DAJ1H8zazAwAA
+      string: "{\n  \"id\": \"chatcmpl-Cm1fdFl3zJ3rpIfb2dYeBcxCKAWTA\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562201,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"You're right next to the American Museum
+        of Natural History, where you can explore fascinating exhibits about dinosaurs,
+        space, and human cultures. Additionally, enjoy a stroll through Central Park
+        to experience its beautiful landscapes and iconic landmarks like Belvedere
+        Castle and Bow Bridge. Don't miss the opportunity to visit both these highlights!\",\n
+        \       \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        124,\n    \"completion_tokens\": 61,\n    \"total_tokens\": 185,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -64,10 +67,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '1158'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '740'
+      - '2354'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -78,10 +83,13 @@ interactions:
       which might reference context in the chat history, formulate a standalone question
       which can be understood without the chat history. Do NOT answer the question,
       just reformulate it if needed and otherwise return it as is.","role":"system"},{"content":"I''m
-      at Central Park W & 79st, New York, NY 10024, United States.","role":"user"},{"content":"Nearby,
-      you can visit the American Museum of Natural History, renowned for its extensive
-      exhibits on mammals, the cosmos, and ancient cultures.","role":"assistant"},{"content":"11
-      W 53rd St, New York, NY 10019, United States.","role":"user"}],"model":"gpt-4o","stream":false,"temperature":1.0}'
+      at Central Park W & 79st, New York, NY 10024, United States.","role":"user"},{"content":"You''re
+      right next to the American Museum of Natural History, where you can explore
+      fascinating exhibits about dinosaurs, space, and human cultures. Additionally,
+      enjoy a stroll through Central Park to experience its beautiful landscapes and
+      iconic landmarks like Belvedere Castle and Bow Bridge. Don''t miss the opportunity
+      to visit both these highlights!","role":"assistant"},{"content":"11 W 53rd St,
+      New York, NY 10019, United States.","role":"user"}],"model":"gpt-4o","stream":false,"temperature":1.0}'
     headers:
       Accept:
       - application/json
@@ -90,7 +98,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '713'
+      - '924'
       Content-Type:
       - application/json
       Host:
@@ -109,21 +117,21 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jJJNb9swDIbv/hWEzs5gx06a5FJ0Ow5oD/souqIwFJmxtcqiINFduyL/
-        fZCTxu7WAb3ooIcvyZfkcwIgdC02IFQrWXXOzD6Zdn2hmq9N+f3sx9VFk60f+cp+DMXnh9+5SKOC
-        tj9R8Yvqg6LOGWRN9oCVR8kYs+Zny0W5KopsNYCOajRR1jielTSbZ/Nylq1m2fIobEkrDGIDtwkA
-        wPPwxhZtjY9iA1n68tNhCLJBsTkFAQhPJv4IGYIOLC2LdISKLKMdur5uJYOSFp6oB0ZjoEOQW+oZ
-        uEUwpGR0A+TBEsutQXBGKgxgUXrIc7iGReFr+MIpXOIvuCF/n8LlDeRZlq9T+GY1Y8SSMZxPu/C4
-        64OMQ7C9MRMgbSwVyw7+745kf3JsqHGetuEvqdhpq0NbeZSBbHQXmJwY6D4BuBsm278alnCeOscV
-        0z0O5fJiccgnxl2OtMiPkImlmaiWy/SNfFWNLLUJk90IJVWL9SgdFyn7WtMEJBPX/3bzVu6Dc22b
-        96QfgVLoGOvKeay1eu14DPMYT/1/YacpDw2LgP5BK6xYo4+bqHEne3O4QhGeAmNX7bRt0DuvD6e4
-        c5Us67yYl0u1EMk++QMAAP//AwAvRMTHkwMAAA==
+      string: "{\n  \"id\": \"chatcmpl-Cm1fh2wJAUkmVZnvJ2HeItnUQ8tMT\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562205,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"What attractions or noteworthy sites
+        are located at or near 11 W 53rd St, New York, NY 10019, United States?\",\n
+        \       \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        169,\n    \"completion_tokens\": 29,\n    \"total_tokens\": 198,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_37d212baff\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -138,10 +146,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '912'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '1488'
+      - '1940'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -155,10 +165,13 @@ interactions:
       tell the user there''s nothing to see where they''re at. Use three sentences
       maximum and keep your suggestions concise.\n\n---START OF CONTEXT---\nCentral
       Park\n\nAmerican Museum of Natural History---END OF CONTEXT---\n\n","role":"system"},{"content":"I''m
-      at Central Park W & 79st, New York, NY 10024, United States.","role":"user"},{"content":"Nearby,
-      you can visit the American Museum of Natural History, renowned for its extensive
-      exhibits on mammals, the cosmos, and ancient cultures.","role":"assistant"},{"content":"11
-      W 53rd St, New York, NY 10019, United States.","role":"user"}],"model":"gpt-4o","stream":false,"temperature":1.0}'
+      at Central Park W & 79st, New York, NY 10024, United States.","role":"user"},{"content":"You''re
+      right next to the American Museum of Natural History, where you can explore
+      fascinating exhibits about dinosaurs, space, and human cultures. Additionally,
+      enjoy a stroll through Central Park to experience its beautiful landscapes and
+      iconic landmarks like Belvedere Castle and Bow Bridge. Don''t miss the opportunity
+      to visit both these highlights!","role":"assistant"},{"content":"11 W 53rd St,
+      New York, NY 10019, United States.","role":"user"}],"model":"gpt-4o","stream":false,"temperature":1.0}'
     headers:
       Accept:
       - application/json
@@ -167,7 +180,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '948'
+      - '1159'
       Content-Type:
       - application/json
       Host:
@@ -186,22 +199,23 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFNNa9wwEL37Vww6teAN++H96N6WFBYKS0NbGkoJRiuNbTWyRkhykk3I
-        fw+St+tNm0IvPsyb9/TmzfgpA2BKsjUw0fAgWqtHl7r5cNlcb7b07Uv1+fHxUygK/rBtrz7W+JXl
-        kUH7XyjCb9aFoNZqDIpMDwuHPGBUnSwX82I1m03GCWhJoo602oZRQaPpeFqMxqvReHEkNqQEeraG
-        nxkAwFP6RotG4gNbQ5JJlRa95zWy9akJgDnSscK498oHbgLLB1CQCWiS6x/UAXcIQpNHCAShQdh1
-        HrsWqIIdSXQGNi7Aux3tNu9zuG+UaKBCHjqHHrgB1VqH3qs7BEFao4jzR3Z6p7XkuDsANxLaXo67
-        kIMyQndSmRruyd162B/gOzewpbrJ4UoJ7j3liXXNXUP64nwCh1XneQzQdFqfAdwYCjwaSNndHJHn
-        U1qaauto7/+gskoZ5ZvSIfdkYjI+kGUJfc4AbtJWuldBM+uotaEMdIvpucly2eux4Q4GdLY4goEC
-        10N9Opnlb+iVEgNX2p/tlQkuGpQDdTgC3klFZ0B2NvXfbt7S7idXpv4f+QEQAm1AWVqHUonXEw9t
-        DuNv8q+2U8rJMPPo7pTAMih0cRMSK97p/oKZP/iAbVkpU6OzTvVnXNlyNZvPC7FYLZFlz9kLAAAA
-        //8DADPR1SfPAwAA
+      string: "{\n  \"id\": \"chatcmpl-Cm1fmWZyA4sfhFBBtCTcsWLGMWQ56\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562210,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"You're right by the Museum of Modern
+        Art (MoMA), which houses an impressive collection of modern and contemporary
+        art, including works by Van Gogh and Warhol. Enjoy exploring the vibrant gallery
+        spaces and temporary exhibitions. It's a must-visit for art enthusiasts!\",\n
+        \       \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        211,\n    \"completion_tokens\": 51,\n    \"total_tokens\": 262,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -216,10 +230,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '1071'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '631'
+      - '1503'
       x-openai-proxy-wasm:
       - v0.1
     status:

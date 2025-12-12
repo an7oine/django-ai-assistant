@@ -367,7 +367,9 @@ def test_create_thread_message(authenticated_client):
     ai_message = chat_messages[1]
 
     assert human_message.content == "Hello, what is the temperature in SF right now?"
-    assert ai_message.content == "The current temperature in San Francisco is 32 degrees Celsius."
+    assert (
+        ai_message.content == "The current temperature in San Francisco, CA, is 32 degrees Celsius."
+    )
 
 
 # DELETE

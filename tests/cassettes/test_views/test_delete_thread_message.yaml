@@ -32,22 +32,24 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFNdb9swDHz3rxD4HA/5apb4bWixFOiKIdtQFFkKg5FpW4ssaZJctAvy
-        3wfbie2kHTA/GAJPdySP1D5gDEQCEQOeo+eFkeG1zBffbtNPa8x+PN+PH38/XtNS/dnd2JuHWxhU
-        DL39RdyfWB+4LowkL7RqYG4JPVWqo4+zq+l8Mhlf1UChE5IVLTM+nOpwPBxPw+E8HM6OxFwLTg4i
-        9jNgjLF9/a9KVAm9QMSGg1OkIOcwI4jaS4yB1bKKADonnEflYdCBXCtPqqpalVL2AK+1jDlK2SVu
-        vn3v3PmEUsYu260nDyvKXu6+rperlaQvd8uJvO/la6RfTV1QWire+tPD23h0kYwxUFg0XPI8j3lp
-        LSkfeyoMWfSlpQsxxgBtVhakfNUI7DcgNcdKfgPRBr6jYp8tKi4c1xs4wBn7ELx3furZZCktHcq3
-        /qFS2td5agOfjsihnZXUmbF66y6okAolXB5bQldb0J9EcCqkLgHKs2GDsbowPvZ6R3XS0WjaqEK3
-        iz10dgS99ih78clxn8714oQ8inob2gXkyHNKOmq3iFgmQveAoNf722re0276Fyr7H/kO4JyMpyQ2
-        lhLBzzvurlmqnuq/rrUu1wWDI/ssOMVekK3mkVCKpWxeEbhX56mIU6EyssaK+ilBauLZfLHFZE4L
-        hOAQ/AUAAP//AwCNsY0rUwQAAA==
+      string: "{\n  \"id\": \"chatcmpl-Cm1g4ucsNq9adHfvDLZ5ld5DvZKuz\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562228,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": null,\n        \"tool_calls\": [\n          {\n
+        \           \"id\": \"call_7rbBcpyP3VC4CH1iRPe7Voj6\",\n            \"type\":
+        \"function\",\n            \"function\": {\n              \"name\": \"fetch_current_temperature\",\n
+        \             \"arguments\": \"{\\\"location\\\":\\\"San Francisco\\\"}\"\n
+        \           }\n          }\n        ],\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"tool_calls\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 114,\n    \"completion_tokens\":
+        16,\n    \"total_tokens\": 130,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -62,10 +64,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '1107'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '580'
+      - '466'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -73,8 +77,8 @@ interactions:
       message: OK
 - request:
     body: '{"messages":[{"content":"You are a temperature bot. Today is 2024-06-09.","role":"system"},{"content":"Hello,
-      what is the temperature in SF right now?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_sgkZ3VQegxKOZGQQleLKG3lM","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
-      \"San Francisco\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_sgkZ3VQegxKOZGQQleLKG3lM"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
+      what is the temperature in SF right now?","role":"user"},{"content":null,"role":"assistant","tool_calls":[{"type":"function","id":"call_7rbBcpyP3VC4CH1iRPe7Voj6","function":{"name":"fetch_current_temperature","arguments":"{\"location\":
+      \"San Francisco\"}"}}]},{"content":"32 degrees Celsius","role":"tool","tool_call_id":"call_7rbBcpyP3VC4CH1iRPe7Voj6"}],"model":"gpt-4o","stream":false,"temperature":1.0,"tools":[{"type":"function","function":{"name":"fetch_current_temperature","description":"Fetch
       the current temperature data for a location","parameters":{"properties":{"location":{"type":"string"}},"required":["location"],"type":"object"}}},{"type":"function","function":{"name":"fetch_forecast_temperature","description":"Fetch
       the forecast temperature data for a location","parameters":{"type":"object","properties":{"location":{"type":"string"},"dt_str":{"description":"Date
       in the format ''YYYY-MM-DD''","type":"string"}},"required":["location","dt_str"]}}}]}'
@@ -105,20 +109,21 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFKxbtswEN31FQfOVqDIsiN7DZIlQwJUQ9EiEGjyJDGlSII8pU0D/3tB
-        ybGUNAW6cLh37/G9u3tNAJiSbA9MdJxE73R6rbtdpbGqsofn4uvtz98PL08HU97f3Xy7qdgqMuzh
-        CQW9sS6E7Z1GUtZMsPDICaPq5dV2U5TrdX41Ar2VqCOtdZQWNs2zvEizMs22J2JnlcDA9vA9AQB4
-        Hd9o0Uj8xfaQrd4qPYbAW2T7cxMA81bHCuMhqEDcEFvNoLCG0Iyuqw5BDN6jISDsHXpOg0dQBr5w
-        A7eeG6GCsKACrHOQ2HrEANeogxrCxVLVYzMEHkOZQesFwI2xxONQxjyPJ+R4TqBt67w9hA9U1iij
-        Qld75MGa6DaQdWxEjwnA4zip4V145rztHdVkf+D43WWRT3ps3s0CXZ9AssT1or7ZrD7RqyUSVzos
-        Zs0EFx3KmTovhg9S2QWQLFL/7eYz7Sm5Mu3/yM+AEOgIZe08SiXeJ57bPMbT/VfbecqjYRbQPyuB
-        NSn0cRMSGz7o6apYeAmEfd0o06J3Xk2n1bh6W+4OXJa44yw5Jn8AAAD//wMAptKFf2MDAAA=
+      string: "{\n  \"id\": \"chatcmpl-Cm1g57RGhvOLdScHV5QXLDvJYsluQ\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562229,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"The current temperature in San Francisco
+        is 32 degrees Celsius.\",\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 142,\n    \"completion_tokens\":
+        13,\n    \"total_tokens\": 155,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -133,10 +138,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '867'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '851'
+      - '359'
       x-openai-proxy-wasm:
       - v0.1
     status:

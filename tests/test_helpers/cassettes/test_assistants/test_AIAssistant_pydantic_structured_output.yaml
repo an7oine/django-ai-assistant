@@ -30,24 +30,27 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAA4xUTU8bMRC951eMfMklQfmCQK5IlULbSyVKpYIix57NTvF6jMcObBH/vfKGJqGl
-        Ui978Jv3Zt74eZ97AIqsWoAytU6mCW546eqLm0/pi71cfru+3t5c+a/64ePphwf6vLxQg8Lg9Q80
-        6TfrxHATHCZiv4NNRJ2wqI7nZ6ez8+l0OuqAhi26QtuENJzxcDKazIaj8+Ho7JVYMxkUtYDvPQCA
-        5+5bRvQWn9QCOpnupEERvUG12BcBqMiunCgtQpK0T2pwAA37hL6betlvQDjGdgDrnGAJln0/Qa23
-        CAGjsNcOyFccG11sgV5zTiABDVVkgLylLdmsnUD2DkUg1dj2I0LIa0cGKtrkiALaW3gki66FiIY3
-        nn6iBfKlHhq0pIEjcKoxvlJdC9oYFKG1QxDO0aCcwLKCW3XFtb9VELHCKJAYhBtkj1DphrMUKQ2m
-        1lGbhLG00SCJi8/gUAtCiLwli9BwROg28pQG3ZTLvnNgGZoW1iipqNfoQte55Vy8dX0j+c1x65Yz
-        3Ht+3C/OtQNYdm6bBr0FS2KySKFp3wL5h0yRUOCRUl320ICliCa59uT4viJWWXSJi8/OHQHae07d
-        vXRJuXtFXvbZcLwJkdfyB1VV5EnqVUQt7EsOJHFQHfrSA7jrMpjfxEqFyE1Iq8T32LWbzndy6hD6
-        AzifvYKJk3aH8/F4PHhHbmUxaXJyFGJltKnRHqiHxOtsiY+A3pHpv6d5T3tnnPzmf+QPgDEYEtpV
-        iGjJvHV8KItY/gn/KtsvuRtYCcYtGVwlwlguwmKls9s9VyWtJGxWFfkNxhBp92arsJrO7WQ8Weuq
-        Ur2X3i8AAAD//wMA3BMd27wEAAA=
+      string: "{\n  \"id\": \"chatcmpl-Cm1gAL3vuGjwwDwXJjvKtn6a7xX8o\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562234,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"I'm sorry, but I need more specific
+        information to provide details about a person named John who is 30 years old
+        and not a student. \\\"John\\\" is a very common name, and without additional
+        details, it's challenging to identify or describe someone accurately.\\n\\nIf
+        you have more information or context about John, such as his last name, his
+        current occupation, location, or any public achievements or works, I might
+        be able to help more effectively. However, please remember to respect privacy
+        and confidentiality when sharing personal details.\",\n        \"refusal\":
+        null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n
+        \     \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        37,\n    \"completion_tokens\": 103,\n    \"total_tokens\": 140,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_37d212baff\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -62,10 +65,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '1346'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '1558'
+      - '3451'
       x-openai-proxy-wasm:
       - v0.1
     status:
@@ -75,13 +80,14 @@ interactions:
     body: '{"messages":[{"content":"You are a helpful assistant that provides information
       about people.\nUse the chat history to produce a JSON output.","role":"system"},{"content":"Tell
       me about John who is 30 years old and not a student.","role":"user"},{"content":"I''m
-      sorry, but I don''t have personal information about specific individuals unless
-      they''re public figures and widely recognized in the media or other publicly
-      accessible sources. If \"John\" refers to someone famous or a character in a
-      story, please provide more context, and I''ll do my best to help. If you''re
-      referring to someone you know personally, I recommend discussing any inquiries
-      with them directly.","role":"assistant"},{"content":"Use the chat history to
-      produce a JSON output.","role":"user"}],"model":"gpt-4o-2024-08-06","response_format":{"type":"json_schema","json_schema":{"schema":{"properties":{"name":{"title":"Name","type":"string"},"age":{"title":"Age","type":"integer"},"is_student":{"title":"Is
+      sorry, but I need more specific information to provide details about a person
+      named John who is 30 years old and not a student. \"John\" is a very common
+      name, and without additional details, it''s challenging to identify or describe
+      someone accurately.\n\nIf you have more information or context about John, such
+      as his last name, his current occupation, location, or any public achievements
+      or works, I might be able to help more effectively. However, please remember
+      to respect privacy and confidentiality when sharing personal details.","role":"assistant"},{"content":"Use
+      the chat history to produce a JSON output.","role":"user"}],"model":"gpt-4o-2024-08-06","response_format":{"type":"json_schema","json_schema":{"schema":{"properties":{"name":{"title":"Name","type":"string"},"age":{"title":"Age","type":"integer"},"is_student":{"title":"Is
       Student","type":"boolean"}},"required":["name","age","is_student"],"title":"OutputSchema","type":"object","additionalProperties":false},"name":"OutputSchema","strict":true}},"stream":false,"temperature":1.0}'
     headers:
       Accept:
@@ -91,7 +97,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1183'
+      - '1316'
       Content-Type:
       - application/json
       Host:
@@ -112,20 +118,20 @@ interactions:
     uri: https://api.openai.com/v1/chat/completions
   response:
     body:
-      string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFLBjtMwEL3nK6w5JyhNsqXNEThxAHFCK7KKXHuSmDq28TjAUvXfkdNu
-        k4VF4uLDvHnP783MKWEMlISagRh4EKPT2Vs97O/f9DLfH799unv3ufhIhj7c/3rc8h9HSCPDHr6i
-        CE+sV8KOTmNQ1lxg4ZEHjKqb19u7aleWZTEDo5WoI613IatsVuRFleW7LN9eiYNVAglq9iVhjLHT
-        /EaLRuJPqFmePlVGJOI9Qn1rYgy81bECnEhR4CZAuoDCmoBmdn1qwPARG6gbeG8H00DaAO9joczT
-        BhS1FCaJJjRQd1wTntdKHruJeAxiJq1XADfGBh4HMWd4uCLnm2tte+ftgf6gQqeMoqH1yMma6JCC
-        dTCj54Sxh3k607PA4LwdXWiDPeL8XZEXFz1Y9rGgm+oKBhu4XrE22/QFvVZi4ErTar4guBhQLtRl
-        GXySyq6AZJX6bzcvaV+SK9P/j/wCCIEuoGydR6nE88RLm8d4rv9qu015NgyE/rsS2AaFPm5CYscn
-        fbkkoEcKOLadMj1659XlnDrX4m6zx7IqdwdIzslvAAAA//8DACtdxsdXAwAA
+      string: "{\n  \"id\": \"chatcmpl-Cm1gDYq4ErofSm26ezPhe4VaGdPKu\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562237,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"{\\\"name\\\":\\\"John\\\",\\\"age\\\":30,\\\"is_student\\\":false}\",\n
+        \       \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        231,\n    \"completion_tokens\": 14,\n    \"total_tokens\": 245,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
@@ -140,10 +146,12 @@ interactions:
       - X-Request-ID
       cf-cache-status:
       - DYNAMIC
+      content-length:
+      - '855'
       openai-project:
-      - proj_7m8RjEIHmauJaSe2iK7Z48fc
+      - proj_dummy_openai_id
       x-envoy-upstream-service-time:
-      - '538'
+      - '713'
       x-openai-proxy-wasm:
       - v0.1
     status:
