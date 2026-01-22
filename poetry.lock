@@ -1785,6 +1785,21 @@ openai = ">=1.109.1,<3.0.0"
 tiktoken = ">=0.7.0,<1.0.0"
 
 [[package]]
+name = "langchain-text-splitters"
+version = "1.1.0"
+description = "LangChain text splitting utilities"
+optional = false
+python-versions = "<4.0.0,>=3.10.0"
+groups = ["main"]
+files = [
+    {file = "langchain_text_splitters-1.1.0-py3-none-any.whl", hash = "sha256:f00341fe883358786104a5f881375ac830a4dd40253ecd42b4c10536c6e4693f"},
+    {file = "langchain_text_splitters-1.1.0.tar.gz", hash = "sha256:75e58acb7585dc9508f3cd9d9809cb14751283226c2d6e21fb3a9ae57582ca22"},
+]
+
+[package.dependencies]
+langchain-core = ">=1.2.0,<2.0.0"
+
+[[package]]
 name = "langgraph"
 version = "1.0.7"
 description = "Building stateful, multi-actor applications with LLMs"
@@ -5119,4 +5134,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "0f0b3faf4629ee2989378a8d61bbf153363b7018ceadb26a3752d22b12a8d76a"
+content-hash = "33b1fe043b5c2fe20a3f7384b1b66264b9704162cadfda9fc09da2c7fd959506"
