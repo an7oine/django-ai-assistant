@@ -4,8 +4,14 @@ This changelog references changes made both to the Django backend, `django-ai-as
 frontend TypeScript client, `django-ai-assistant-client`.
 
 !!! note
-    The backend and the frontend are versioned together, that is, they have the same version number.
-    When you update the backend, you should also update the frontend to the same version.
+The backend and the frontend are versioned together, that is, they have the same version number.
+When you update the backend, you should also update the frontend to the same version.
+
+## 0.1.2 <small>January 22, 2026</small> {id="0.1.3"}
+
+- Migrated coverage reporting to Codecov
+- add Python 3.13 support across CI, tox, and project metadata
+- Bump langchain, langgraph, langchain-openai and langchain-anthropic versions
 
 ## 0.1.2 <small>April 11, 2025</small> {id="0.1.2"}
 
@@ -14,7 +20,7 @@ frontend TypeScript client, `django-ai-assistant-client`.
 ## 0.1.1 <small>November 19, 2024</small> {id="0.1.1"}
 
 - Fix an `AttributeError` raised in RAG AIAssistants when the `retriever` supports the `invoke` call
-only with the query string as `input`.
+  only with the query string as `input`.
 
 ## 0.1.0 <small>October 11, 2024</small> {id="0.1.0"}
 
