@@ -5,6 +5,10 @@ on:
     types: [published]
   workflow_dispatch:
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   publish-pypi:
     name: Publish django-ai-assistant to PyPI
@@ -72,6 +76,4 @@ jobs:
       - name: Publish package distributions to npm
         working-directory: ./frontend
         run: |
-          pnpm publish --no-git-checks --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_API_TOKEN }}
+          pnpm publish --no-git-checks
