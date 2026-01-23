@@ -72,6 +72,6 @@ jobs:
       - name: Publish package distributions to npm
         working-directory: ./frontend
         run: |
-          pnpm publish --no-git-checks
+          pnpm publish --no-git-checks --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_API_TOKEN }}
