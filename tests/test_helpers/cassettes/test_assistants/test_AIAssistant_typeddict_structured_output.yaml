@@ -1,25 +1,27 @@
 interactions:
 - request:
-    body: '{"messages": [{"content": "You are a helpful assistant that provides information
-      about movies.", "role": "system"}, {"content": "Provide information about the
-      movie Shrek. It was released in 2001 and is an animation and comedy movie.",
-      "role": "user"}], "model": "gpt-4o-2024-08-06", "n": 1, "stream": false, "temperature":
-      1.0}'
+    body: '{"messages":[{"content":"You are a helpful assistant that provides information
+      about movies.","role":"system"},{"content":"Provide information about the movie
+      Shrek. It was released in 2001 and is an animation and comedy movie.","role":"user"}],"model":"gpt-4o-2024-08-06","stream":false,"temperature":1.0}'
     headers:
-      accept:
+      Accept:
       - application/json
-      accept-encoding:
-      - gzip, deflate
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '306'
+      Content-Type:
+      - application/json
+      Host:
+      - api.openai.com
+      X-Stainless-Raw-Response:
+      - 'true'
       authorization:
       - DUMMY
-      connection:
-      - keep-alive
-      content-length:
-      - '328'
-      content-type:
-      - application/json
-      host:
-      - api.openai.com
+      cookie:
+      - DUMMY
       user-agent:
       - OpenAI/Python
       x-stainless-retry-count:
@@ -27,141 +29,174 @@ interactions:
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-ADXKkgr6nyCVJHaCMMEpAmtUmykDo\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1727789762,\n  \"model\": \"gpt-4o-2024-08-06\",\n
-      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"\\\"Shrek\\\" is a 2001 American computer-animated
-      comedy film produced by DreamWorks Animation and directed by Andrew Adamson
-      and Vicky Jenson. The film is an adaptation of William Steig's 1990 fairy tale
-      picture book of the same name. \\n\\n### Plot Summary:\\nThe story follows Shrek,
-      a reclusive and grouchy green ogre who lives in a swamp. His solitude is disrupted
-      when numerous fairy tale creatures are banished there by the evil and short-tempered
-      Lord Farquaad. In order to reclaim his swamp, Shrek strikes a deal with Farquaad:
-      to rescue Princess Fiona from a dragon-guarded castle and bring her to Farquaad
-      so he can marry her. Shrek is joined by a talkative donkey named Donkey, and
-      together they embark on a comedic adventure.\\n\\n### Cast:\\n- **Mike Myers**
-      as Shrek\\n- **Eddie Murphy** as Donkey\\n- **Cameron Diaz** as Princess Fiona\\n-
-      **John Lithgow** as Lord Farquaad\\n\\n### Success:\\n\\\"Shrek\\\" was both
-      a critical and commercial success. It broke new ground in animation and was
-      praised for its animation quality, witty humor, and appealing to both children
-      and adults. The film also cleverly subverts traditional fairy tale tropes. \\n\\n###
-      Awards:\\nThe movie won the first-ever Academy Award for Best Animated Feature
-      and was also nominated for Best Adapted Screenplay. The film's success led to
-      a highly popular franchise, including several sequels and spin-offs.\\n\\n###
-      Cultural Impact:\\n\\\"Shrek\\\" has had a significant influence on animation
-      and popular culture, often credited with revitalizing animated films with its
-      unique storytelling, humor, and innovative use of computer animation. Its impact
-      extends beyond the movies, as Shrek has become an iconic character in his own
-      right.\\n\\nOverall, \\\"Shrek\\\" remains a beloved classic that continues
-      to entertain audiences with its blend of humor, heart, and fairy-tale magic.\",\n
-      \       \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
-      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 45,\n    \"completion_tokens\":
-      400,\n    \"total_tokens\": 445,\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\":
-      0\n    }\n  },\n  \"system_fingerprint\": \"fp_e5e4913e83\"\n}\n"
+    body:
+      string: "{\n  \"id\": \"chatcmpl-Cm1gGATNtIpS55JsTJBWL77latkJT\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562240,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"\\\"Shrek\\\" is a 2001 animated comedy
+        film directed by Andrew Adamson and Vicky Jenson. It was produced by DreamWorks
+        Animation and is based on a 1990 fairy tale picture book of the same name
+        by William Steig. The film features an ensemble voice cast, including Mike
+        Myers, Eddie Murphy, Cameron Diaz, and John Lithgow.\\n\\n### Plot Summary\\nThe
+        story follows Shrek, a reclusive and grumpy ogre who lives in a swamp. His
+        peaceful life is disrupted when numerous fairy-tale creatures, banished by
+        the evil Lord Farquaad, invade his swamp. In an attempt to reclaim his land,
+        Shrek strikes a deal with Farquaad to rescue Princess Fiona, whom Farquaad
+        intends to marry to become king. Throughout the journey, Shrek is accompanied
+        by Donkey, a talkative and annoying donkey with a big heart. The adventure
+        takes a turn as Shrek and Fiona begin to develop feelings for each other,
+        revealing that Fiona has her own secrets.\\n\\n### Notable Features\\n- **Voice
+        Cast**: Mike Myers as Shrek, Eddie Murphy as Donkey, Cameron Diaz as Princess
+        Fiona, John Lithgow as Lord Farquaad.\\n- **Music**: The soundtrack features
+        a mix of original scores and popular music, including the famous song \\\"All
+        Star\\\" by Smash Mouth.\\n- **Animation**: The film is noted for its groundbreaking
+        use of computer animation and its humorous take on traditional fairy tale
+        tropes.\\n\\n### Reception\\n\\\"Shrek\\\" was both a critical and commercial
+        success, praised for its animation, voice performances, and satirical humor.
+        It won the first-ever Academy Award for Best Animated Feature and was also
+        nominated for Best Adapted Screenplay. The film's success led to several sequels
+        and spin-offs, making it a significant franchise in animation history.\\n\\n\\\"Shrek\\\"
+        is often credited for its role in revitalizing interest in animated films
+        for adults and children alike, blending sharp humor with heartfelt moments.
+        Its influence can be seen in the way that subsequent animated films approached
+        storytelling and humor.\",\n        \"refusal\": null,\n        \"annotations\":
+        []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n
+        \   }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 45,\n    \"completion_tokens\":
+        419,\n    \"total_tokens\": 464,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\":
+        0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_37d212baff\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
       Server: DUMMY
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Transfer-Encoding:
       - chunked
       X-Content-Type-Options:
       - nosniff
       access-control-expose-headers:
       - X-Request-ID
-    http_version: HTTP/1.1
-    status_code: 200
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '2779'
+      openai-project:
+      - proj_dummy_openai_id
+      x-envoy-upstream-service-time:
+      - '7853'
+      x-openai-proxy-wasm:
+      - v0.1
+    status:
+      code: 200
+      message: OK
 - request:
-    body: '{"messages": [{"content": "You are a helpful assistant that provides information
-      about movies.\nUse the chat history to produce a JSON output.", "role": "system"},
-      {"content": "Provide information about the movie Shrek. It was released in 2001
-      and is an animation and comedy movie.", "role": "user"}, {"content": "\"Shrek\"
-      is a 2001 American computer-animated comedy film produced by DreamWorks Animation
-      and directed by Andrew Adamson and Vicky Jenson. The film is an adaptation of
-      William Steig''s 1990 fairy tale picture book of the same name. \n\n### Plot
-      Summary:\nThe story follows Shrek, a reclusive and grouchy green ogre who lives
-      in a swamp. His solitude is disrupted when numerous fairy tale creatures are
-      banished there by the evil and short-tempered Lord Farquaad. In order to reclaim
-      his swamp, Shrek strikes a deal with Farquaad: to rescue Princess Fiona from
-      a dragon-guarded castle and bring her to Farquaad so he can marry her. Shrek
-      is joined by a talkative donkey named Donkey, and together they embark on a
-      comedic adventure.\n\n### Cast:\n- **Mike Myers** as Shrek\n- **Eddie Murphy**
-      as Donkey\n- **Cameron Diaz** as Princess Fiona\n- **John Lithgow** as Lord
-      Farquaad\n\n### Success:\n\"Shrek\" was both a critical and commercial success.
-      It broke new ground in animation and was praised for its animation quality,
-      witty humor, and appealing to both children and adults. The film also cleverly
-      subverts traditional fairy tale tropes. \n\n### Awards:\nThe movie won the first-ever
-      Academy Award for Best Animated Feature and was also nominated for Best Adapted
-      Screenplay. The film''s success led to a highly popular franchise, including
-      several sequels and spin-offs.\n\n### Cultural Impact:\n\"Shrek\" has had a
-      significant influence on animation and popular culture, often credited with
-      revitalizing animated films with its unique storytelling, humor, and innovative
-      use of computer animation. Its impact extends beyond the movies, as Shrek has
-      become an iconic character in his own right.\n\nOverall, \"Shrek\" remains a
-      beloved classic that continues to entertain audiences with its blend of humor,
-      heart, and fairy-tale magic.", "role": "assistant"}, {"content": "Use the chat
-      history to produce a JSON output.", "role": "user"}], "model": "gpt-4o-2024-08-06",
-      "n": 1, "response_format": {"type": "json_schema", "json_schema": {"name": "OutputSchema",
-      "description": "dict() -> new empty dictionary\ndict(mapping) -> new dictionary
-      initialized from a mapping object''s\n    (key, value) pairs\ndict(iterable)
-      -> new dictionary initialized as if via:\n    d = {}\n    for k, v in iterable:\n        d[k]
+    body: '{"messages":[{"content":"You are a helpful assistant that provides information
+      about movies.\nUse the chat history to produce a JSON output.","role":"system"},{"content":"Provide
+      information about the movie Shrek. It was released in 2001 and is an animation
+      and comedy movie.","role":"user"},{"content":"\"Shrek\" is a 2001 animated comedy
+      film directed by Andrew Adamson and Vicky Jenson. It was produced by DreamWorks
+      Animation and is based on a 1990 fairy tale picture book of the same name by
+      William Steig. The film features an ensemble voice cast, including Mike Myers,
+      Eddie Murphy, Cameron Diaz, and John Lithgow.\n\n### Plot Summary\nThe story
+      follows Shrek, a reclusive and grumpy ogre who lives in a swamp. His peaceful
+      life is disrupted when numerous fairy-tale creatures, banished by the evil Lord
+      Farquaad, invade his swamp. In an attempt to reclaim his land, Shrek strikes
+      a deal with Farquaad to rescue Princess Fiona, whom Farquaad intends to marry
+      to become king. Throughout the journey, Shrek is accompanied by Donkey, a talkative
+      and annoying donkey with a big heart. The adventure takes a turn as Shrek and
+      Fiona begin to develop feelings for each other, revealing that Fiona has her
+      own secrets.\n\n### Notable Features\n- **Voice Cast**: Mike Myers as Shrek,
+      Eddie Murphy as Donkey, Cameron Diaz as Princess Fiona, John Lithgow as Lord
+      Farquaad.\n- **Music**: The soundtrack features a mix of original scores and
+      popular music, including the famous song \"All Star\" by Smash Mouth.\n- **Animation**:
+      The film is noted for its groundbreaking use of computer animation and its humorous
+      take on traditional fairy tale tropes.\n\n### Reception\n\"Shrek\" was both
+      a critical and commercial success, praised for its animation, voice performances,
+      and satirical humor. It won the first-ever Academy Award for Best Animated Feature
+      and was also nominated for Best Adapted Screenplay. The film''s success led
+      to several sequels and spin-offs, making it a significant franchise in animation
+      history.\n\n\"Shrek\" is often credited for its role in revitalizing interest
+      in animated films for adults and children alike, blending sharp humor with heartfelt
+      moments. Its influence can be seen in the way that subsequent animated films
+      approached storytelling and humor.","role":"assistant"},{"content":"Use the
+      chat history to produce a JSON output.","role":"user"}],"model":"gpt-4o-2024-08-06","response_format":{"type":"json_schema","json_schema":{"name":"OutputSchema","description":"dict()
+      -> new empty dictionary\ndict(mapping) -> new dictionary initialized from a
+      mapping object''s\n    (key, value) pairs\ndict(iterable) -> new dictionary
+      initialized as if via:\n    d = {}\n    for k, v in iterable:\n        d[k]
       = v\ndict(**kwargs) -> new dictionary initialized with the name=value pairs\n    in
-      the keyword argument list.  For example:  dict(one=1, two=2)", "strict": true,
-      "schema": {"type": "object", "properties": {"title": {"type": "string"}, "year":
-      {"type": "integer"}, "genres": {"type": "array", "items": {"type": "string"}}},
-      "required": ["title", "year", "genres"], "additionalProperties": false}}}, "stream":
-      false, "temperature": 1.0}'
+      the keyword argument list.  For example:  dict(one=1, two=2)","strict":false,"schema":{"type":"object","properties":{"title":{"type":"string"},"year":{"type":"integer"},"genres":{"type":"array","items":{"type":"string"}}},"required":["title","year","genres"]}}},"stream":false,"temperature":1.0}'
     headers:
-      accept:
+      Accept:
       - application/json
-      accept-encoding:
-      - gzip, deflate
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3110'
+      Content-Type:
+      - application/json
+      Host:
+      - api.openai.com
+      X-Stainless-Helper-Method:
+      - chat.completions.parse
+      X-Stainless-Raw-Response:
+      - 'true'
       authorization:
       - DUMMY
-      connection:
-      - keep-alive
-      content-length:
-      - '3065'
-      content-type:
-      - application/json
-      host:
-      - api.openai.com
+      cookie:
+      - DUMMY
       user-agent:
       - OpenAI/Python
-      x-stainless-helper-method:
-      - beta.chat.completions.parse
       x-stainless-retry-count:
       - '0'
     method: POST
     uri: https://api.openai.com/v1/chat/completions
   response:
-    content: "{\n  \"id\": \"chatcmpl-ADXKoApXH6ZJOtW4XKfKT4n5H35Kb\",\n  \"object\":
-      \"chat.completion\",\n  \"created\": 1727789766,\n  \"model\": \"gpt-4o-2024-08-06\",\n
-      \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
-      \"assistant\",\n        \"content\": \"{\\\"title\\\":\\\"Shrek\\\",\\\"year\\\":2001,\\\"genres\\\":[\\\"Animation\\\",\\\"Comedy\\\"]}\",\n
-      \       \"refusal\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\":
-      \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 617,\n    \"completion_tokens\":
-      18,\n    \"total_tokens\": 635,\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\":
-      0\n    }\n  },\n  \"system_fingerprint\": \"fp_143bb8492c\"\n}\n"
+    body:
+      string: "{\n  \"id\": \"chatcmpl-Cm1gRgGnOBKM05pH0AdjJUNImZZot\",\n  \"object\":
+        \"chat.completion\",\n  \"created\": 1765562251,\n  \"model\": \"gpt-4o-2024-08-06\",\n
+        \ \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\":
+        \"assistant\",\n        \"content\": \"{\\\"title\\\":\\\"Shrek\\\",\\\"year\\\":2001,\\\"genres\\\":[\\\"Animation\\\",\\\"Comedy\\\"]}\",\n
+        \       \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\":
+        null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\":
+        636,\n    \"completion_tokens\": 18,\n    \"total_tokens\": 654,\n    \"prompt_tokens_details\":
+        {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\":
+        {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\":
+        0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\":
+        \"default\",\n  \"system_fingerprint\": \"fp_83554c687e\"\n}\n"
     headers:
       Connection:
       - keep-alive
-      Content-Encoding:
-      - gzip
       Content-Type:
       - application/json
       Date: Sun, 09 Jun 2024 23:39:08 GMT
       Server: DUMMY
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Transfer-Encoding:
       - chunked
       X-Content-Type-Options:
       - nosniff
       access-control-expose-headers:
       - X-Request-ID
-    http_version: HTTP/1.1
-    status_code: 200
+      cf-cache-status:
+      - DYNAMIC
+      content-length:
+      - '877'
+      openai-project:
+      - proj_dummy_openai_id
+      x-envoy-upstream-service-time:
+      - '663'
+      x-openai-proxy-wasm:
+      - v0.1
+    status:
+      code: 200
+      message: OK
 version: 1

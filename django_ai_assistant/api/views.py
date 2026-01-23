@@ -38,7 +38,6 @@ def init_api():
         urls_namespace="django_ai_assistant",
         # Add auth to all endpoints
         auth=django_auth,
-        csrf=True,
     )
 
 
