@@ -89,7 +89,7 @@ scikit-learn = "^1.5.2"
 pycmarkgfm = "^1.2.1"
 
 [build-system]
-requires = ["poetry-core>=1.2.0"]
+requires = ["poetry-core>=1.8.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
