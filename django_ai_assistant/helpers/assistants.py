@@ -3,11 +3,6 @@ import inspect
 import re
 from typing import Annotated, Any, ClassVar, Dict, Sequence, Type, TypedDict, cast
 
-from langchain.chains.combine_documents.base import (
-    DEFAULT_DOCUMENT_PROMPT,
-    DEFAULT_DOCUMENT_SEPARATOR,
-)
-from langchain.tools import StructuredTool
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import (
     AIMessage,
@@ -31,7 +26,7 @@ from langchain_core.runnables import (
     Runnable,
     RunnableBranch,
 )
-from langchain_core.tools import BaseTool
+from langchain_core.tools import BaseTool, StructuredTool
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, StateGraph, add_messages
 from langgraph.prebuilt import ToolNode
@@ -115,6 +110,11 @@ class AIAssistant(abc.ABC):  # noqa: F821
     """Registry of all AIAssistant subclasses by their id.\n
     Automatically populated by when a subclass is declared.\n
     Use `get_cls_registry` and `get_cls` to access the registry."""
+
+    DEFAULT_DOCUMENT_PROMPT: ClassVar[PromptTemplate] = PromptTemplate.from_template(
+        "{page_content}"
+    )
+    DEFAULT_DOCUMENT_SEPARATOR: ClassVar[str] = "\n\n"
 
     def __init__(self, *, user=None, request=None, view=None, **kwargs: Any):
         """Initialize the AIAssistant instance.\n
@@ -329,7 +329,7 @@ class AIAssistant(abc.ABC):  # noqa: F821
         Returns:
             str: a separator for documents in the prompt.
         """
-        return DEFAULT_DOCUMENT_SEPARATOR
+        return self.DEFAULT_DOCUMENT_SEPARATOR
 
     def get_document_prompt(self) -> PromptTemplate:
         """Get the PromptTemplate template to use when rendering RAG documents in the prompt.
@@ -340,7 +340,7 @@ class AIAssistant(abc.ABC):  # noqa: F821
         Returns:
             PromptTemplate: a prompt template for RAG documents.
         """
-        return DEFAULT_DOCUMENT_PROMPT
+        return self.DEFAULT_DOCUMENT_PROMPT
 
     def get_retriever(self) -> BaseRetriever:
         """Get the RAG retriever to use for fetching documents.\n
@@ -530,7 +530,7 @@ class AIAssistant(abc.ABC):  # noqa: F821
         workflow.add_node("history", history)
         workflow.add_node("retriever", retriever)
         workflow.add_node("agent", agent)
-        workflow.add_node("tools", ToolNode(tools))
+        workflow.add_node("tools", ToolNode(tools=tools))
         workflow.add_node("respond", record_response)
 
         workflow.set_entry_point("setup")
