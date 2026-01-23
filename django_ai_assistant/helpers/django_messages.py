@@ -36,16 +36,21 @@ def save_django_messages(messages: list[BaseMessage], thread: "Thread") -> list[
     messages_to_create = [m for m in messages if m.id not in existing_message_ids]
 
     # Insert in bulk only if primary keys are then assigned by the DB.
-    if connections[
+    # Please check https://docs.djangoproject.com/en/4.0/ref/models/querysets/#django.db.models.query.QuerySet.bulk_create
+    # for more context on why this is required
+    can_bulk_insert = connections[
         DjangoMessage.objects.db
-    ].features.can_return_rows_from_bulk_insert:
+    ].features.can_return_rows_from_bulk_insert
+    if can_bulk_insert:
         created_messages = DjangoMessage.objects.bulk_create(
             [DjangoMessage(thread=thread, message={}) for _ in messages_to_create],
         )
     else:
-        for message in (created_messages := [
-            DjangoMessage(thread=thread, message={}) for _ in messages_to_create
-        ]):
+        for message in (
+            created_messages := [
+                DjangoMessage(thread=thread, message={}) for _ in messages_to_create
+            ]
+        ):
             message.save()
 
     # Update langchain message IDs with Django message IDs
