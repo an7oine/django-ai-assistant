@@ -1790,7 +1790,7 @@ version = "1.1.0"
 description = "LangChain text splitting utilities"
 optional = false
 python-versions = "<4.0.0,>=3.10.0"
-groups = ["main"]
+groups = ["example"]
 files = [
     {file = "langchain_text_splitters-1.1.0-py3-none-any.whl", hash = "sha256:f00341fe883358786104a5f881375ac830a4dd40253ecd42b4c10536c6e4693f"},
     {file = "langchain_text_splitters-1.1.0.tar.gz", hash = "sha256:75e58acb7585dc9508f3cd9d9809cb14751283226c2d6e21fb3a9ae57582ca22"},
@@ -5134,4 +5134,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "33b1fe043b5c2fe20a3f7384b1b66264b9704162cadfda9fc09da2c7fd959506"
+content-hash = "e56558061d7dc7ff2adc586845dae8ff20905f31397244866c93b89ce57a4db7"
