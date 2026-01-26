@@ -71,4 +71,4 @@ jobs:
       - name: Publish package distributions to npm
         working-directory: ./frontend
         run: |
-          npm publish --no-git-checks
+          npm publish
