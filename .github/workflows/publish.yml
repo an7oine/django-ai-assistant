@@ -5,6 +5,10 @@ on:
     types: [published]
   workflow_dispatch:
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   publish-pypi:
     name: Publish django-ai-assistant to PyPI
@@ -73,5 +77,3 @@ jobs:
         working-directory: ./frontend
         run: |
           pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_API_TOKEN }}
