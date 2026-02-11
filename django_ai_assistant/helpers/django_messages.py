@@ -1,3 +1,4 @@
+import asyncio
 from typing import TYPE_CHECKING
 
 from django.db import connections, transaction
@@ -14,7 +15,7 @@ if TYPE_CHECKING:
 
 
 @transaction.atomic
-def save_django_messages(messages: list[BaseMessage], thread: "Thread") -> list["DjangoMessage"]:
+def _save_django_messages(messages: list[BaseMessage], thread: "Thread") -> list["DjangoMessage"]:
     """
     Save a list of messages to the Django database.
     Note: Changes the message objects in place by changing each message.id to the Django ID.
@@ -61,3 +62,12 @@ def save_django_messages(messages: list[BaseMessage], thread: "Thread") -> list[
 
     DjangoMessage.objects.bulk_update(created_messages, ["message"])
     return created_messages
+
+
+def save_django_messages(messages: list[BaseMessage], thread: "Thread") -> None:
+    try:
+        loop = asyncio.get_running_loop()
+    except RuntimeError:
+        _save_django_messages(messages, thread)
+    else:
+        loop.run_in_executor(None, _save_django_messages, messages, thread)
